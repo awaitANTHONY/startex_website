@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Interactive link showcase shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+	
+	.qodef-ils-holder {
+
+		&.qodef-ils-standard {
+
+			.qodef-ils-item-content {
+				padding-left: 15.5%;
+			}
+		}
+
+		&.qodef-ils-fullscreen {
+
+			.qodef-ils-image-holder {
+				width: 45%;
+			}
+
+			.qodef-ils-item-link {
+				font-size: 70px;
+			}
+		}
+	}
+}
+
+@include laptop-landscape-mac {
+
+	.qodef-ils-holder {
+
+		&.qodef-ils-standard {
+
+			.qodef-ils-item-content {
+				padding-left: 15.2%;
+			}
+		}
+	}
+}
+
+@include laptop-landscape {
+
+	.qodef-ils-holder {
+
+		&.qodef-ils-fullscreen {
+
+			.qodef-ils-image-holder {
+				width: 52%;
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.qodef-ils-holder {
+
+		&.qodef-ils-standard {
+
+			.qodef-ils-item-content {
+				padding-left: 13.5%;
+			}
+		}
+
+		&.qodef-ils-fullscreen {
+
+			.qodef-ils-image-holder {
+				width: 50%;
+			}
+
+			.qodef-ils-item-link {
+				font-size: 54px;
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+
+	.qodef-ils-holder {
+
+		&.qodef-ils-standard {
+
+			.qodef-ils-item-content {
+				padding-left: 11%;
+			}
+		}
+
+		&.qodef-ils-fullscreen {
+
+			.qodef-ils-image-holder {
+				width: 82%;
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.qodef-ils-holder {
+
+		&.qodef-ils-standard {
+
+			.qodef-ils-item-content {
+				padding-left: 9.5%;
+			}
+		}
+
+		&.qodef-ils-fullscreen {
+
+			.qodef-ils-image-holder {
+				width: 100%;
+			}
+
+			.qodef-ils-item-link {
+				font-size: 40px;
+			}
+		}
+	}
+}
+
+@include phone-portrait {
+
+	.qodef-ils-holder {
+
+		&.qodef-ils-standard {
+
+			.qodef-ils-image-holder {
+				width: 76%;
+			}
+
+			.qodef-ils-item-content {
+				padding-left: 7.5%;
+			}
+		}
+
+		&.qodef-ils-fullscreen {
+
+			.qodef-ils-item-link {
+				font-size: 27px;
+			}
+		}
+	}
+}
+
+@include smaller-phone-portrait {
+
+	.qodef-ils-holder {
+
+		&.qodef-ils-standard {
+
+			.qodef-ils-image-holder {
+				width: 71%;
+			}
+
+			.qodef-ils-item-content {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Interactive link showcase shortcode responsive style - end
+   ========================================================================== */

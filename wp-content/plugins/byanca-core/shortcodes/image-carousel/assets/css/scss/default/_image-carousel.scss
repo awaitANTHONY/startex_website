@@ -1,0 +1,33 @@
+/* ==========================================================================
+# Image carousel - begin
+	========================================================================== */
+
+.qodef-image-carousel-holder {
+    
+    .qodef-owl-slider {
+
+        .owl-item {
+            padding-bottom: 25px;
+            box-sizing: border-box;
+        }
+
+        .owl-nav {
+            
+            @include phone-landscape {
+                display: none;
+            }
+            
+            .owl-prev {
+                left: -50px;
+            }
+
+            .owl-next {
+                right: -50px;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Image carousel - end
+	========================================================================== */

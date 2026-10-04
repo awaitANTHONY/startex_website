@@ -1,0 +1,52 @@
+.page-template-user-dashboard {
+
+    label {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.2857142857142857142857142857143em;
+        text-transform: none;
+        color: $default-heading-color;
+    }
+
+    .qodef-membership-dashboard-nav-holder {
+
+        .qodef-membership-dashboard-nav{
+
+            li{
+
+                a{
+
+                    .qodef-dash-icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include ipad-portrait{
+        .qodef-membership-dashboard-nav-holder {
+            width: 100%;
+            float: none;
+
+            .qodef-membership-dashboard-nav{
+                display: block;
+                li{
+                    display: block;
+                    a{
+                        padding: 15px 0;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .qodef-membership-dashboard-content-holder {
+            width: 100%;
+            float: none;
+            padding: 0;
+        }
+    }
+}
+
+

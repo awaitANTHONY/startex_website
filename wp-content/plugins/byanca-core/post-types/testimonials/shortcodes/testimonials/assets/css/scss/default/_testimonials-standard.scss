@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Testimonials standard style - begin
+   ========================================================================== */
+
+.qodef-testimonials-holder {
+    
+    &.qodef-testimonials-standard {
+        text-align: center;
+
+        .qodef-testimonial-image {
+            @include qodefRelativeHolderLayout();
+            margin: 0 0 32px;
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .qodef-testimonial-title {
+            margin: 0;
+        }
+
+        .qodef-testimonial-author {
+            margin: 41px 0 0;
+
+            .qodef-testimonials-author-job {
+                text-transform: none;
+            }
+        }
+
+        .qodef-testimonial-text {
+            margin: 36px 0 0;
+            font-size: 18px;
+            line-height: 32px;
+            color: #3d3d3d;
+        }
+
+        .owl-nav {
+
+            .owl-prev {
+                left: 3px;
+            }
+
+            .owl-next {
+                right: 3px;
+            }
+
+            @include phone-portrait {
+                display: none;
+            }
+        }
+
+        /* Light/Dark styles */
+        &.qodef-testimonials-light {
+            
+            .qodef-testimonial-title,
+            .qodef-testimonial-text,
+            .qodef-testimonial-author {
+                color: #fff;
+            }
+
+            .owl-nav {
+
+                .owl-prev,
+                .owl-next {
+                    color: #fff;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .owl-dots {
+
+                .owl-dot {
+
+                    span {
+                        background-color: rgba(#fff, .3);
+                    }
+
+                    &:hover,
+                    &.active {
+
+                        span {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Testimonials standard style - end
+   ========================================================================== */

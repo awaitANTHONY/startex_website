@@ -1,0 +1,221 @@
+/* ==========================================================================
+   Interactive link showcase shortcode style - begin
+   ========================================================================== */
+
+.qodef-ils-holder {
+	@include qodefRelativeHolderLayout();
+
+	.qodef-ils-image-holder {
+		position: relative;
+		display: block;
+		overflow: hidden;
+	}
+
+	.qodef-ils-item-image {
+		@include qodefAbsoluteHolderLayout();
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0;
+		@include qodefTransition(opacity .0s .4s);
+
+		&.qodef-active {
+			z-index: 10;
+			opacity: 1;
+			@include qodefTransition(opacity .4s cubic-bezier(0.28, 0.38, 0, 0.81));
+		}
+
+		img {
+			display: none;
+		}
+	}
+
+	.qodef-ils-content-holder {
+		@include qodefAbsoluteHolderLayout();
+		z-index: 100;
+	}
+
+	.qodef-ils-content-inner {
+		@include qodefTableLayout();
+	}
+
+	.qodef-ils-item-content {
+		@include qodefTableCellLayout();
+		box-sizing: border-box;
+	}
+
+	.qodef-ils-item-link {
+		position: relative;
+		display: block;
+		cursor: default;
+		box-sizing: border-box;
+	}
+
+	.qodef-ils-item-title {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		line-height: inherit;
+		cursor: pointer;
+		z-index: 2;
+		box-sizing: border-box;
+	}
+
+	&.qodef-ils-standard {
+		height: 87.5vh;
+
+		.qodef-ils-image-holder {
+			width: 79.2%;
+			height: 100%;
+			margin: 0 0 0 auto;
+		}
+
+		.qodef-ils-item-content {
+			padding-left: 16.8%
+		}
+
+		.qodef-ils-item-link {
+			margin-top: 31px;
+			font-size: 23px;
+			font-weight: 500;
+			line-height: 1.2em;
+			color: #0a0a0a;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			.qodef-ils-item-title {
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: currentColor;
+					@include qodefTransform(scaleX(0));
+					@include qodefTransformOrigin(100% 50%);
+					@include qodefTransitionTransform(.4s cubic-bezier(0.28, 0.38, 0, 0.81));
+				}
+
+				&:hover {
+
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+
+			&.qodef-active {
+
+				.qodef-ils-item-title {
+
+					&:before {
+						@include qodefTransformOrigin(0% 50%);
+						@include qodefTransform(scaleX(1));
+					}
+				}
+			}
+		}
+
+		&.qodef-ils-skin-light {
+
+			.qodef-ils-item-link {
+				color: #fff;
+			}
+		}
+
+		&.qodef-ils--loading-fx {
+			visibility: hidden;
+
+			.touch & {
+				visibility: visible;
+			}
+
+			.no-touch & {
+				visibility: visible;
+
+				.qodef-ils-item-link {
+					opacity: 0;
+					@include qodefTransform(translate3d(0, 20px, 0));
+				}
+
+				.qodef-ils-item-link {
+					&.qodef-ils--loaded {
+						opacity: 1;
+						@include qodefTransform(translate3d(0, 0, 0));
+
+						@for $i from 1 to 10 {
+							&:nth-child(#{$i}) {
+								@include qodefTransition(.5s cubic-bezier(0.28, 0.38, 0, 0.81) $i * 0.1s);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.qodef-ils-fullscreen {
+		height: 100vh;
+
+		.admin-bar & {
+			height: calc(100vh - 32px);
+		}
+
+		.qodef-ils-image-holder {
+			top: 50%;
+			width: 52%;
+			height: 80%;
+			margin: 0 auto;
+			@include qodefTransform(translate3d(0, -50%, 0));
+		}
+
+
+		.qodef-ils-item-image {
+			@include qodefTransition(opacity .0s .65s);
+
+			&.qodef-active {
+				@include qodefTransition(opacity .65s cubic-bezier(0.28, 0.38, 0, 0.81));
+			}
+		}
+
+		.qodef-ils-item-content {
+			text-align: center;
+		}
+
+		.qodef-ils-item-link {
+			margin-top: 51px;
+			font-size: 80px;
+			font-weight: 500;
+			line-height: 1.2em;
+			color: #ff9e55;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:hover,
+			&.qodef-active {
+				color: $first-main-color;
+			}
+		}
+
+		&.qodef-ils-skin-light {
+
+			.qodef-ils-item-link {
+
+				&:hover,
+				&.qodef-active {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Interactive link showcase shortcode style - end
+   ========================================================================== */

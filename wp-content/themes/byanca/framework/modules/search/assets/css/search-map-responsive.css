@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Search responsive styles - begin
+   ========================================================================== */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* ==========================================================================
+# Search template responsive style - begin
+========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-search-page-holder article .qodef-post-image {
+    width: 80px;
+  }
+  .qodef-search-page-holder article .qodef-post-title-area {
+    padding: 0 0 0 105px;
+    min-height: 80px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-search-page-holder article .qodef-post-image {
+    width: 60px;
+  }
+  .qodef-search-page-holder article .qodef-post-title-area {
+    padding: 0 0 0 80px;
+    min-height: 60px;
+  }
+}
+
+/* ==========================================================================
+# Search template responsive style - end
+========================================================================== */
+/* ==========================================================================
+# Fullscreen search responsive - start
+========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-fullscreen-search-holder .qodef-form-holder-inner {
+    width: 80%;
+  }
+}
+
+/* ==========================================================================
+# Fullscreen search responsive - end
+========================================================================== */
+/* ==========================================================================
+   Search responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=search-map-responsive.css.map */

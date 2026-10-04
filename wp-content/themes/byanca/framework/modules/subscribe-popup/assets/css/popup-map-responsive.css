@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Subscribe Popup responsive styles - begin
+   ========================================================================== */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* ==========================================================================
+# Subscribe Pop-up style responsive - begin
+========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .qodef-subscribe-popup-holder .qodef-sp-inner {
+    width: 63%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-subscribe-popup-holder .qodef-sp-inner {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-subscribe-popup-holder .qodef-sp-inner {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-subscribe-popup-holder .qodef-sp-inner {
+    min-height: 450px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-subscribe-popup-holder .qodef-sp-inner {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-subscribe-popup-holder .qodef-sp-content-container {
+    width: 100%;
+    padding: 0 40px;
+  }
+  .qodef-subscribe-popup-holder .qodef-sp-background {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-subscribe-popup-holder .qodef-sp-content-container .wpcf7-form-control.wpcf7-text, .qodef-subscribe-popup-holder .qodef-sp-content-container .wpcf7-form-control.wpcf7-number, .qodef-subscribe-popup-holder .qodef-sp-content-container .wpcf7-form-control.wpcf7-date, .qodef-subscribe-popup-holder .qodef-sp-content-container .wpcf7-form-control.wpcf7-textarea, .qodef-subscribe-popup-holder .qodef-sp-content-container .wpcf7-form-control.wpcf7-select, .qodef-subscribe-popup-holder .qodef-sp-content-container .wpcf7-form-control.wpcf7-quiz {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ==========================================================================
+# Subscribe Pop-up style responsive - end
+========================================================================== */
+/* ==========================================================================
+   Subscribe Popup responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=popup-map-responsive.css.map */

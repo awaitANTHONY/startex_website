@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Pricing Tables shortcode style - begin
+   ========================================================================== */
+
+.qodef-pricing-tables {
+    @include qodefRelativeHolderLayout();
+}
+
+.qodef-price-table {
+
+    &.qodef-pt-active-item {
+
+        .qodef-pt-active-item-label {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            width: auto;
+            height: 46px;
+            margin: 0;
+            padding: 0 28px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 46px;
+            text-align: center;
+            color: #333;
+            background-color: $default-background-color;
+            z-index: 100;
+            box-sizing: border-box;
+            @include qodefTransform(translateZ(0));
+        }
+    }
+
+    .qodef-pt-inner {
+        @include qodefRelativeHolderLayout();
+
+        .qodef-pt-image-holder {
+            @include qodefRelativeHolderLayout();
+
+            img {
+                display: block;
+            }
+        }
+
+        .qodef-pt-main-holder {
+            @include qodefRelativeHolderLayout();
+            padding: 42px 0 0 0;
+            box-sizing: border-box;
+        }
+
+        .qodef-pt-title-holder {
+            position: relative;
+            margin: 0 0 25px;
+
+            .qodef-pt-title {
+                display: block;
+                margin: 0;
+                box-sizing: border-box;
+            }
+        }
+
+        .qodef-pt-prices {
+            position: relative;
+
+            .qodef-pt-value,
+            .qodef-pt-price {
+                font-size: 44px;
+                font-weight: 500;
+                color: $default-heading-color;
+            }
+
+            .qodef-pt-value {
+                position: relative;
+            }
+
+            .qodef-pt-price {
+                position: relative;
+            }
+
+            .qodef-pt-mark {
+                position: relative;
+                display: block;
+                margin: 2px 0 0 0;
+                font-size: 14px;
+                font-weight: 500;
+                color: $default-heading-color;
+            }
+        }
+
+        .qodef-pt-content {
+            margin: 25px 0 0 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .qodef-pt-button {
+            margin: 34px 0 0 0;
+        }
+    }
+}
+/* ==========================================================================
+   Pricing Tables shortcode style - end
+   ========================================================================== */

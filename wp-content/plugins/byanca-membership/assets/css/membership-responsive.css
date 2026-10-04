@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* ==========================================================================
+   Shortcodes responsive styles
+   ========================================================================== */
+.page-template-user-dashboard label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2857142857142857142857142857143em;
+  text-transform: none;
+  color: #000;
+}
+
+.page-template-user-dashboard .qodef-membership-dashboard-nav-holder .qodef-membership-dashboard-nav li a .qodef-dash-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-template-user-dashboard .qodef-membership-dashboard-nav-holder {
+    width: 100%;
+    float: none;
+  }
+  .page-template-user-dashboard .qodef-membership-dashboard-nav-holder .qodef-membership-dashboard-nav {
+    display: block;
+  }
+  .page-template-user-dashboard .qodef-membership-dashboard-nav-holder .qodef-membership-dashboard-nav li {
+    display: block;
+  }
+  .page-template-user-dashboard .qodef-membership-dashboard-nav-holder .qodef-membership-dashboard-nav li a {
+    padding: 15px 0;
+    text-align: left;
+  }
+  .page-template-user-dashboard .qodef-membership-dashboard-content-holder {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=../../../../plugins/byanca-membership/assets/css/membership-responsive.css.map */

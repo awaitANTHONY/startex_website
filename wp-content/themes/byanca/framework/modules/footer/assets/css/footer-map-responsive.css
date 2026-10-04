@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Footer responsive styles - begin
+   ========================================================================== */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* ==========================================================================
+   Footer responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .qodef-page-footer .qodef-column-content.qodef-grid-col-3 {
+    width: 50%;
+    float: left;
+  }
+  .qodef-page-footer .qodef-column-content.qodef-grid-col-3:nth-child(2n+1) {
+    clear: both;
+  }
+  .qodef-page-footer .qodef-column-content.qodef-grid-col-3:nth-child(3), .qodef-page-footer .qodef-column-content.qodef-grid-col-3:nth-child(4) {
+    margin-top: 30px;
+  }
+  .qodef-page-footer .qodef-column-content.qodef-grid-col-4 {
+    width: 33.33333333333333%;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-page-footer .qodef-column-content:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+/* ==========================================================================
+   Footer responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Footer responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=footer-map-responsive.css.map */

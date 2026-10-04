@@ -1,0 +1,126 @@
+.qodef-hiding-images {
+
+	.qodef-hi-inner {
+		text-align: center;
+	}
+
+	.qodef-hi-main-image {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 42.7%;
+
+		@include phone-portrait {
+			width: 80%;
+		}
+
+		.qodef-hi-laptop {
+			display: block;
+			position: relative;
+		}
+
+		.qodef-hi-main-image-holder {
+			position: absolute;
+			height: 74%;
+			left: 14.8%;
+			top: 4.5%;
+			width: 70%;
+			background: center center no-repeat;
+			background-size: cover;
+		}
+	}
+
+	.qodef-hi-other-images {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+
+		@include phone-portrait {
+			display: none;
+		}
+	}
+
+	a.qodef-hiding-image-link {
+		position: absolute;
+		top: 4.5%;
+		left: 15.1%;
+		width: 69.42%;
+		height: 73.93%;
+		z-index: 2;
+	}
+
+	.qodef-hi-other-image {
+		position: absolute;
+		opacity: 0;
+		@include qodefTransform(translate3d(0, 0, 0));
+		-webkit-transition: -webkit-transform 3s cubic-bezier(0.23, 1, 0.32, 1), opacity .6s .1s;
+		transition: transform 3s cubic-bezier(0.23, 1, 0.32, 1), opacity .6s .1s;
+
+		a.qodef-hiding-image-other-link {
+			@include qodefAbsoluteHolderLayout();
+		}
+
+		&.qodef-has-shadow {
+			box-shadow: -2px 8px 19.8px 0.2px rgba(0, 0, 0, 0.1);
+		}
+
+		img {
+			display: block;
+		}
+
+		&:nth-child(1) {
+			left: 0;
+			top: -25%;
+			width: 13.8%;
+			@include qodefTransform(translate3d(15vw, 15vh, 0));
+		}
+
+		&:nth-child(2) {
+			left: 19%;
+			top: -29%;
+			width: 22%;
+			@include qodefTransform(translate3d(5vw, 5vh, 0));
+		}
+
+		&:nth-child(3) {
+			right: 11%;
+			top: -24%;
+			width: 30%;
+			@include qodefTransform(translate3d(-5vw, 5vh, 0));
+		}
+
+		&:nth-child(4) {
+			left: 10%;
+			bottom: -22%;
+			width: 27%;
+			@include qodefTransform(translate3d(5vw, -5vh, 0));
+		}
+
+		&:nth-child(5) {
+			right: 19%;
+			bottom: -22%;
+			width: 19%;
+			@include qodefTransform(translate3d(-5vw, -5vh, 0));
+		}
+
+		&:nth-child(6) {
+			right: 0;
+			bottom: 1%;
+			width: 15.6%;
+			@include qodefTransform(translate3d(-10vw, -5vh, 0));
+		}
+
+		&::nth-child(n+6) {
+			display: none; //6 items supported
+		}
+	}
+
+	&.qodef-in-view {
+		.qodef-hi-other-image {
+			opacity: 1;
+			@include qodefTransform(translate3d(0, 0, 0));
+		}
+	}
+}

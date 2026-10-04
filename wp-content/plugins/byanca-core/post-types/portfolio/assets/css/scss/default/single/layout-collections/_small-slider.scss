@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Portfolio Single - Small Slider layout style - begin
+   ========================================================================== */
+
+.qodef-portfolio-single-holder {
+	
+	&.qodef-ps-small-slider-layout {
+		
+		.qodef-ps-image-holder {
+			
+			.qodef-ps-image-inner {
+				visibility: hidden;
+			}
+			
+			.qodef-ps-image {
+				
+				img {
+					width: 100%;
+				}
+			}
+		}
+		
+		.qodef-ps-content-item {
+			margin: 0 0 30px;
+		}
+
+		.qodef-ps-navigation {
+            margin: 92px 0 3px;
+        }
+
+		.owl-nav {
+
+	        .owl-prev,
+	        .owl-next {
+	            width: 27px;
+	            height: 53px;
+	            color: #fff;
+	            background-color: $default-heading-color;
+
+	            @include qodefTransition(width .2s ease-out);
+
+	            &:hover {
+	                width: 50px;
+	            }
+
+	            > span {
+		            font-size: 20px;
+
+	                &:before {
+	                    font-family: 'ElegantIcons' !important;
+	                }
+
+	            }
+	        }
+
+	        .owl-prev {
+	            left: 0;
+
+	            > span {
+
+	                &:before {
+	                    content: "\34";
+	                }
+	            }
+	        }
+
+	        .owl-next {
+	            right: 0;
+
+	            > span {
+
+	                &:before {
+	                    content: "\35";
+	                }
+	            }
+	        }
+	    }
+	}
+}
+/* ==========================================================================
+   Portfolio Single - Small Slider layout style - end
+   ========================================================================== */

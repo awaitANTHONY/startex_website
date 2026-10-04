@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Blog List widget style - begin
+   ========================================================================== */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+.qodef-blog-list-widget .qodef-widget-title {
+  margin: 0 0 33px;
+}
+
+.qodef-blog-list-widget .qodef-blog-list-holder .qodef-post-title a {
+  position: relative;
+  color: inherit;
+}
+
+.qodef-blog-list-widget .qodef-blog-list-holder .qodef-post-title a:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: 1px solid currentColor;
+  -webkit-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+
+.qodef-blog-list-widget .qodef-blog-list-holder .qodef-post-title a:hover:after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Blog List widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=blog-list-widget-map.css.map */

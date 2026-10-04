@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Presentation shortcode style - begin
+   ========================================================================== */
+
+.qodef-presentation-holder {
+    @include qodefRelativeHolderLayout();
+	
+	.qodef-presentation-primary-image,
+	.qodef-presentation-secondary-image {
+		@include qodefRelativeHolderLayout();
+		
+		img {
+			position: relative;
+			display: block;
+		}
+	}
+
+	.qodef-presentation-primary-image {
+
+		img {
+			max-width: 70%;
+			margin: 0 0 0 auto;
+		}
+	}
+
+	.qodef-presentation-secondary-image {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		img {
+			max-width: 50%;
+		}
+	}
+
+	.qodef-presentation-info {
+		position: relative;
+	}
+
+	.qodef-presentation-text-holder {
+		@include qodefRelativeHolderLayout();
+		padding: 0 60px 96px 60%;
+		box-sizing: border-box;
+	}
+	
+	.qodef-presentation-title {
+		margin: 104px 0 0;
+	}
+
+	.qodef-presentation-separator {
+	    position: relative;
+	    display: block;
+		width: 98px;
+		height: 2px;
+		margin: 23px 0 5px;
+		font-size: 0;
+		line-height: 1em;
+		background-color: $default-heading-color;
+	}
+
+	.qodef-presentation-text {
+		display: inline-block;
+		margin: 20px 0 0;
+	}
+
+	.qodef-presentation-button {
+		margin: 26px 0 0;
+	}
+}
+/* ==========================================================================
+   Presentation shortcode style - end
+   ========================================================================== */

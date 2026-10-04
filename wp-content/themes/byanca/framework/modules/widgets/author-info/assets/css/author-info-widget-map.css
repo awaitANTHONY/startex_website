@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Author Info widget style - begin
+   ========================================================================== */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+.qodef-author-info-widget {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.qodef-author-info-widget .qodef-aiw-image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.qodef-author-info-widget .qodef-aiw-image img {
+  display: block;
+}
+
+.qodef-author-info-widget .qodef-aiw-title {
+  margin: 0 0 33px;
+}
+
+.qodef-author-info-widget .qodef-aiw-text {
+  display: block;
+  margin: 19px 0 0;
+}
+
+/* ==========================================================================
+   Author Info widget style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=author-info-widget-map.css.map */

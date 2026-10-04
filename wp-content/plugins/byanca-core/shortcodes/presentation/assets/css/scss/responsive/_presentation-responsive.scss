@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Presentation shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+
+	.qodef-presentation-holder {
+
+		.qodef-presentation-text-holder {
+			padding: 0 39px 57px 60%;
+		}
+
+		.qodef-presentation-primary-image img {
+			max-width: 62%;
+		}
+
+		.qodef-presentation-secondary-image img {
+			max-width: 48%;
+		}
+	}
+}
+
+@include laptop-landscape-mac {
+
+	.qodef-presentation-holder {
+
+		.qodef-presentation-text-holder {
+			padding: 0 0 31px 55%;
+		}
+
+		.qodef-presentation-title {
+			margin: 60px 0 0;
+		}
+
+		.qodef-presentation-secondary-image img {
+			max-width: 46%;
+		}
+	}
+}
+
+@include laptop-landscape {
+
+	.qodef-presentation-holder {
+
+		.qodef-presentation-primary-image img {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.qodef-presentation-secondary-image {
+			display: none;
+		}
+
+		.qodef-presentation-text-holder {
+			padding: 0 10px;
+		}
+
+		.qodef-presentation-title {
+			margin: 31px 0 0;
+		}
+	}
+}
+/* ==========================================================================
+   Presentation shortcode responsive style - end
+   ========================================================================== */

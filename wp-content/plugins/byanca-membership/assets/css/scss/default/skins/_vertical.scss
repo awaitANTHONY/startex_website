@@ -1,0 +1,84 @@
+.qodef-membership-dashboard-nav-holder,
+.qodef-membership-dashboard-content-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    box-sizing: border-box;
+}
+.qodef-membership-dashboard-nav-holder {
+    width: 30%;
+    padding: 0 15px 0 0;
+    margin: 0 0 35px;
+
+    ul {
+        padding: 0 15px 45px 0;
+        margin: 0;
+        list-style: none;
+        border-right: 1px solid #e1e1e1;
+
+        li {
+            margin: 0 0 18px;
+            padding: 0;
+            &:last-child {
+                margin: 0;
+
+            }
+
+            &.qodef-active-dash{
+
+                a {
+
+                    .qodef-dash-label {
+                        position: relative;
+
+                        &:after {
+                            position: absolute;
+                            display: block;
+                            content: " ";
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            border-bottom: 1px solid $default-heading-color;
+                            @include qodefTransition(width .2s ease-in-out);
+                        }
+                    }
+                }
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+
+}
+
+.qodef-membership-dashboard-content-holder {
+    width: 70%;
+    padding: 0 0 0 30px;
+    margin: 0 0 60px;
+
+    .qodef-profile-image{
+        border-radius: 100%;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+
+        img{
+            display: block;
+            position: relative;
+        }
+    }
+
+    .qodef-membership-dashboard-page-title {
+        margin: 0 0 23px;
+    }
+
+    .qodef-membership-dashboard-page-content p span {
+        color: $default-heading-color;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

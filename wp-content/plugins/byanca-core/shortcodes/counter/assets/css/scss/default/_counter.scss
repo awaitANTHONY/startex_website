@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Counter shortcode style - begin
+   ========================================================================== */
+
+.qodef-counter-holder {
+    @include qodefRelativeHolderLayout();
+	text-align: center;
+    opacity: 0;
+    @include qodefTransition(opacity 0.2s ease-in);
+	
+	.qodef-counter-inner {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+    .qodef-counter {
+	    height: 1em;
+	    display: inline-block !important;
+	    vertical-align: middle;
+	    color: #333;
+	    font-size: 72px;
+	    line-height: 1em;
+	    font-weight: 500;
+	    overflow: hidden;
+    }
+
+    .qodef-counter-title {
+	    margin: 21px 0 0;
+    }
+
+    .qodef-counter-text {
+	    margin: 14px 0 0;
+    }
+}
+/* ==========================================================================
+   Counter shortcode style - end
+   ========================================================================== */

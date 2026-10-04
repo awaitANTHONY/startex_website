@@ -1,0 +1,527 @@
+/* Login/Register widget - start
+   ========================================================================== */
+
+/* User not logged in */
+.qodef-login-register-widget {
+    
+    &.qodef-user-not-logged-in {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        .qodef-sidebar & {
+            width: 100%;
+        }
+
+        .qodef-login-opener {
+            
+            &:before {
+                display: none;
+            }
+
+            &:hover {
+
+                .qodef-login-text {
+
+                    &:before {
+                        @include qodefTransformOrigin(0% 50%);
+                        @include qodefTransform(scaleX(1));
+                    }
+                }
+            }
+
+            .qodef-login-text {
+                position: relative;
+                top: -2px;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: .025em;
+                text-transform: uppercase;
+                color: $default-heading-color;
+
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    width: 100%;
+                    border-bottom: 1px solid currentColor;
+                    @include qodefTransform(scaleX(0));
+                    @include qodefTransformOrigin(100% 50%);
+                    @include qodefTransitionTransform(.4s cubic-bezier(0.28, 0.38, 0, 0.81));
+                }
+            }
+
+            /* Top bar */
+            .qodef-top-bar & {
+                color: #fff;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            /* Menu area */
+            .qodef-menu-area &,
+            .qodef-sticky-header & {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                color: #9c9c9c;
+                font-size: 13px;
+                line-height: 23px;
+                margin: 0 10px;
+                font-weight: 600;
+                text-transform: uppercase;
+                
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            .qodef-dark-header .qodef-menu-area:not(.fixed):not(.qodef-sticky-header) & {
+                color: #000 !important;
+                
+                &:hover {
+                    color: rgba(0, 0, 0, .8);
+                }
+            }
+
+            .qodef-light-header .qodef-menu-area:not(.fixed):not(.qodef-sticky-header) & {
+                color: #fff !important;
+                
+                &:hover {
+                    color: rgba(255, 255, 255, .8);
+                }
+            }
+
+            /* Sidebar */
+            .qodef-sidebar & {
+                color: #000;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                
+                &:hover {
+                    color: #ffec13;
+                }
+            }
+
+            /* Footer */
+            footer & {
+                color: #000;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                
+                &:hover {
+                    color: #ffec13;
+                }
+            }
+
+            /* Side area */
+            .qodef-side-menu & {
+                color: #000;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                
+                &:hover {
+                    color: #ffec13;
+                }
+            }
+        }
+    }
+}
+
+/* User logged in */
+
+.qodef-login-register-widget {
+    
+    &.qodef-user-logged-in {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        
+        .qodef-logged-in-user {
+            display: table;
+            height: 100%;
+            
+            .qodef-logged-in-user-inner {
+                display: table-cell;
+                vertical-align: middle;
+                
+                & > span {
+                    
+                    > span:last-child,
+                    img {
+                        display: none;
+                    }
+                }
+
+                .qodef-logged-in-user-name {
+                    position: relative;
+                    top: -1px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: .025em;
+                    text-transform: uppercase;
+                    color: $default-heading-color;
+
+                    &:before {
+                        content: " ";
+                        position: absolute;
+                        left: 0;
+                        bottom: -5px;
+                        width: 100%;
+                        border-bottom: 1px solid currentColor;
+                        @include qodefTransform(scaleX(0));
+                        @include qodefTransformOrigin(100% 50%);
+                        @include qodefTransitionTransform(.4s cubic-bezier(0.28, 0.38, 0, 0.81));
+                    }
+                }
+            }
+        }
+
+        &:hover {
+
+            .qodef-logged-in-user {
+
+                .qodef-logged-in-user-inner {
+
+                    .qodef-logged-in-user-name {
+
+                        &:before {
+                            @include qodefTransformOrigin(0% 50%);
+                            @include qodefTransform(scaleX(1));
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Top bar and menu area dropdown position */
+        .qodef-menu-area &,
+        .qodef-sticky-header &,
+        .qodef-top-bar & {
+            
+            .qodef-login-dropdown {
+                position: absolute;
+                top: 100%;
+                margin: 0;
+                left: -22px;
+                opacity: 0;
+                list-style-type: none;
+                text-align: left;
+                padding: 0;
+                width: 193px;
+                box-sizing: border-box;
+                visibility: hidden;
+                z-index: 100;
+                @include qodefTransition(opacity 0.3s ease);
+
+                li {
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1em;
+
+                    a {
+                        position: relative;
+                        display: inline-block;
+                        @include qodefTransition(color 0.3s ease);
+                    }
+                }
+            }
+
+            &:hover .qodef-login-dropdown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Menu area style */
+        .qodef-menu-area &,
+        .qodef-sticky-header & {
+            cursor: pointer;
+            
+            /* User part */
+            .qodef-logged-in-user {
+                height: 100%;
+                display: table;
+                vertical-align: middle;
+
+                .qodef-logged-in-user-inner {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 100%;
+                    
+                    & > span {
+                        color: #9c9c9c;
+                        font-size: 13px;
+                        line-height: 23px;
+                        margin: 0 10px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            
+            &:hover {
+                
+                .qodef-logged-in-user {
+                    
+                    .qodef-logged-in-user-inner {
+                        
+                        & > span {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            /* Dropdown part */
+            .qodef-login-dropdown {
+                padding: 29px 0 26px;
+                background-color: #fff;
+                box-shadow: 0px 9px 13.92px 2.08px rgba(0, 0, 0, 0.05);
+
+                li {
+                    padding: 7px 33px 8px;
+
+                    a {
+                        padding: 0;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: $default-text-color;
+
+                        &:after {
+                            content: " ";
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            border-bottom: 1px solid currentColor;
+                            @include qodefTransform(scaleX(0));
+                            @include qodefTransformOrigin(100% 50%);
+                            @include qodefTransitionTransform(.4s cubic-bezier(0.28, 0.38, 0, 0.81));
+                        }
+                        
+                        &:hover {
+
+                            &:after {
+                                @include qodefTransformOrigin(0% 50%);
+                                @include qodefTransform(scaleX(1));
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover .qodef-login-dropdown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .qodef-dark-header .qodef-menu-area:not(.fixed):not(.qodef-sticky-header) & {
+            
+            .qodef-logged-in-user {
+                
+                .qodef-logged-in-user-inner {
+                    
+                    & > span span,
+                    & > span i {
+                        color: #000 !important;
+                        
+                        &:hover {
+                            color: rgba(0, 0, 0, .8);
+                        }
+                    }
+                }
+            }
+        }
+
+        .qodef-light-header .qodef-menu-area:not(.fixed):not(.qodef-sticky-header) & {
+            
+            .qodef-logged-in-user {
+                
+                .qodef-logged-in-user-inner {
+                    
+                    & > span span,
+                    & > span i {
+                        color: #fff !important;
+                        
+                        &:hover {
+                            color: rgba(#fff, .8);
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Top bar style */
+        .qodef-top-bar & {
+            cursor: pointer;
+            
+            /* User part */
+            .qodef-logged-in-user {
+                
+                .qodef-logged-in-user-inner {
+                    
+                    & > span {
+                        color: #fff;
+                        font-weight: 500;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            /* Dropdown part */
+            .qodef-login-dropdown {
+                background-color: #212121;
+                padding: 15px 0;
+                
+                li {
+                    
+                    a {
+                        color: #fff;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        padding: 8px 20px;
+                        
+                        &:hover {
+                            color: rgba(255, 255, 255, .8);
+                        }
+                    }
+                }
+            }
+
+            &:hover .qodef-login-dropdown {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Sidebar style */
+        .qodef-sidebar & {
+            
+            .qodef-logged-in-user {
+                
+                .qodef-logged-in-user-inner {
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid $default-border-color;
+                    
+                    & > span {
+                        color: #000;
+                        font-size: 13px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Footer style */
+        footer & {
+            height: auto;
+            
+            .qodef-logged-in-user {
+                
+                .qodef-logged-in-user-inner {
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid $default-border-color;
+                    
+                    & > span {
+                        color: #000;
+                        font-size: 13px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Sidearea style */
+        .qodef-side-menu & {
+            height: auto;
+            
+            .qodef-logged-in-user {
+                
+                .qodef-logged-in-user-inner {
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid $default-border-color;
+                    
+                    & > span {
+                        color: #666;
+                        font-size: 13px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.qodef-login-register-widget.qodef-user-logged-in {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    cursor: pointer;
+
+    .qodef-logged-in-user {
+        display: table;
+        height: 100%;
+        vertical-align: middle;
+
+        .qodef-logged-in-user-inner {
+            .qodef-logged-in-user-name {
+                margin-right: 10px;
+            }
+
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+        }
+    }
+
+    .qodef-login-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 222px;
+        margin: 0;
+        text-align: left;
+        padding: 29px 10px 26px;
+        background-color: #fff;
+        box-shadow: 0 9px 13.92px 2.08px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        visibility: hidden;
+        list-style-type: none;
+        z-index: 100;
+        box-sizing: border-box;
+        -webkit-transition: opacity .3s ease;
+        -moz-transition: opacity .3s ease;
+        transition: opacity .3s ease;
+    }
+
+    &:hover .qodef-login-dropdown {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+/* Login/Register widget - end
+   ========================================================================== */

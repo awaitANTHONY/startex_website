@@ -1,0 +1,85 @@
+.qodef-portfolio-vertical-slider-holder {
+    height: 100vh;
+
+    .admin-bar & {
+        height: calc(100vh - 32px);
+    }
+
+    .qodef-normal-space .qodef-outer-space {
+        margin: 0;
+    }
+
+    .swiper-container {
+        height: 100vh;
+        margin-bottom: 0 !important; //disable bottom space override
+
+        .admin-bar & {
+            height: calc(100vh - 32px);
+        }
+
+        article {
+            box-sizing: border-box;
+            display: block;
+            //margin: 0 !important;
+            padding: 0 !important;
+            @include qodefTransition(opacity 1s);
+            opacity: .3;
+
+            &.swiper-slide-active {
+                opacity: 1;
+
+                .qodef-pli-text-holder {
+                    opacity: 1;
+                }
+            }
+
+            .qodef-pl-item-inner {
+                height: 100%;
+            }
+
+            .qodef-pli-image,
+            .qodef-pli-text-holder {
+                box-sizing: border-box;
+                float: left;
+                height: 100%;
+                width: 50%;
+            }
+
+            .qodef-pli-background-image {
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+
+            .qodef-pli-text-holder {
+                opacity: 0;
+                padding: 0 20% 0 6%;
+                @include qodefTransition(opacity 1s);
+            }
+
+            .qodef-pli-nav-indicator {
+                margin-bottom: 34px;
+            }
+
+            .qodef-indicator {
+                @include qodefIconCircle(#ffffff, $first-main-color, 37px, false);
+
+                display: inline-block;
+                font-size: 14px;
+                line-height: 37px;
+                margin-right: 20px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            .qodef-nav {
+                display: inline-block;
+            }
+
+            .qodef-pli-title {
+                margin: 0 0 12px 0;
+            }
+        }
+    }
+}

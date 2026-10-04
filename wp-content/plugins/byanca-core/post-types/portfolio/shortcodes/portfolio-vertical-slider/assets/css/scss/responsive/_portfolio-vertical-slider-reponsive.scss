@@ -1,0 +1,33 @@
+@include laptop-landscape-mac() {
+    .qodef-portfolio-vertical-slider-holder {
+        .swiper-container {
+            article {
+                .qodef-pli-text-holder {
+                    padding: 0 12% 0 4%;
+                }
+            }
+        }
+    }
+}
+
+@include ipad-portrait() {
+    .qodef-portfolio-vertical-slider-holder {
+        .swiper-container {
+            article {
+                .qodef-pl-item-inner {
+                    height: 100%;
+                }
+
+                .qodef-pli-image {
+                    display: none;
+                }
+
+                .qodef-pli-text-holder {
+                    float: none;
+                    padding: 0 12% 0 11%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/* ==========================================================================
+   Custom Post Types responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Portfolio Single page responsive style - begin
+   ========================================================================== */
+.qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images {
+  /***** Columns Layout - end *****/
+}
+
+@media only screen and (max-width: 680px) {
+  .qodef-portfolio-single-holder .qodef-ps-image-holder.qodef-ps-gallery-images .qodef-ps-image {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-portfolio-single-holder .qodef-ps-info-holder {
+    margin: 30px 0 0 !important;
+  }
+}
+
+/* ==========================================================================
+   Portfolio Single page responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 1366px) {
+  .qodef-portfolio-vertical-slider-holder .swiper-container article .qodef-pli-text-holder {
+    padding: 0 12% 0 4%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-portfolio-vertical-slider-holder .swiper-container article .qodef-pl-item-inner {
+    height: 100%;
+  }
+  .qodef-portfolio-vertical-slider-holder .swiper-container article .qodef-pli-image {
+    display: none;
+  }
+  .qodef-portfolio-vertical-slider-holder .swiper-container article .qodef-pli-text-holder {
+    float: none;
+    padding: 0 12% 0 11%;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=../../../../plugins/byanca-core/assets/css/custom-post-types-map-responsive.css.map */
